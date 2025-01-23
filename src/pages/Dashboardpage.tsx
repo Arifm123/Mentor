@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 import { Loader2, Plus, Trash } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Checkbox } from "../../components/ui/checkbox"
-import { Input } from "../../components/ui/input"
-import { createTodo, deleteTodo, toggleTodo } from "../../actions"
+import { Button } from "../components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
+import { Checkbox } from "../components/ui/checkbox"
+import { Input } from "../components/ui/input"
+import { createTodo, deleteTodo, toggleTodo } from "../actions"
 import type { Todo } from "@/types/todo"
 
 export default function DashboardPage() {

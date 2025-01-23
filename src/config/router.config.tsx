@@ -1,46 +1,29 @@
-import { createBrowserRouter, redirect, RouterProvider } from "react-router-dom"
-import HomePage from "../pages/home/home-page"
-import LoginPage from "../pages/login/login.page"
-import RegisterPage from "../pages/register/register.page"
-import DashboardPage from "../pages/dashboard/dashboard.page"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import HomePage from "../pages/Homepage"
+import LoginPage from "../pages/LoginPage"
+import RegisterPage from "../pages/Registerpage"
+import DashboardPage from "../pages/Dashboardpage"
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <HomePage />,
   },
   {
-    path: "/home",
-    element: <HomePage />,
-  },
-  {
-    path: "/login",
+    path: '/login',
     element: <LoginPage />,
   },
   {
-    path: "/register",
+    path: '/register',
     element: <RegisterPage />,
   },
   {
-    path: "/dashboard",
+    path: '/dashboard',
     element: <DashboardPage />,
   },
-  {
-    path: "*",
-    loader: () => redirect("/"),
-  },
+]);
 
-  
-])
+export function AppRouter() {
+  return <RouterProvider router={router} />;
+}
 
-const Routing: React.FC = () => {
-return(<>
-
-<RouterProvider router={router} />
-
-</>)
-  };
-  
-  
-
-export default Routing

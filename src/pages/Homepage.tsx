@@ -2,7 +2,7 @@
 
 import { useNavigate } from "react-router-dom"
 import { ArrowRight, CheckCircle, ListTodo } from "lucide-react"
-import { Button } from "../../components/ui/button"
+import { Button } from "../components/ui/button"
 
 export default function HomePage() {
   const navigate = useNavigate()

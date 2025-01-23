@@ -1,11 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './assets/css/main.css'
-import Routing from './config/router.config'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import App from "./App"
+import "./assets/css/main.css"
 
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-   <Routing/>
-  </StrictMode>,
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 )
+
