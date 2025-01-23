@@ -2,8 +2,6 @@
 
 import { useState } from "react"
 import { Loader2, Plus, Trash } from "lucide-react"
-import { useRouter } from "next/navigation"
-
 import { Button } from "../../components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
 import { Checkbox } from "../../components/ui/checkbox"
@@ -12,7 +10,6 @@ import { createTodo, deleteTodo, toggleTodo } from "../../actions"
 import type { Todo } from "@/types/todo"
 
 export default function DashboardPage() {
-  const router = useRouter()
   const [newTodo, setNewTodo] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [todos, setTodos] = useState<Todo[]>([])

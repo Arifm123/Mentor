@@ -1,10 +1,10 @@
-import { createBrowserRouter, redirect } from "react-router-dom"
+import { createBrowserRouter, redirect, RouterProvider } from "react-router-dom"
 import HomePage from "../pages/home/home-page"
 import LoginPage from "../pages/login/login.page"
 import RegisterPage from "../pages/register/register.page"
 import DashboardPage from "../pages/dashboard/dashboard.page"
 
-const Routing = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
@@ -29,6 +29,18 @@ const Routing = createBrowserRouter([
     path: "*",
     loader: () => redirect("/"),
   },
+
+  
 ])
+
+const Routing: React.FC = () => {
+return(<>
+
+<RouterProvider router={router} />
+
+</>)
+  };
+  
+  
 
 export default Routing
